@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습 3-2</title>
+<script>
+	function addItem(){
+		let todo=document.getElementById("item");
+		let list = document.getElementById("todolist");
+		let listitem = document.createElement("li");
+		let xbtn=document.createElement("button");
+		
+		xbtn.onclick = function(e){
+			let pnode = e.target.parentNode;
+			list.removeChild(pnode);
+		}
+		
+		listitem.innerText = todo.value;
+		xbtn.innerText = "X";
+		listitem.appendChild(xbtn);
+		list.appendChild(listitem);
+		
+		todo.value="";
+		todo.focus();
+	}
+</script>
+</head>
+<body>
+	<div>
+		<h2>My ToDo App</h2>
+		<hr>
+		<input id="item" type="text" placeholder="할일을 입력하세요..">
+		<button type="button" onClick="addItem()">할일 추가</button>
+		<div>
+			<hr>
+			<ul id="todolist"></ul>
+		</div>
+	</div>
+</body>
+</html>

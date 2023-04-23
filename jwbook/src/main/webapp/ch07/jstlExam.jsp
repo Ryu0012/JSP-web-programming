@@ -13,7 +13,7 @@
 	<h3>set, out</h3>
 	<c:set var="product1" value="<b>애플 아이폰</b>" />
 	<c:set var="product2" value="삼성 갤럭시 노트" />
-	<c:set var="intArray" value="${[1,2,3,4,5] }" />
+	<!-- <c:set var="intArray" value="${[1,2,3,4,5] }" />-->
 	
 	<p>
 		product1(jstl):
@@ -61,6 +61,5 @@
 	${city }
 	<c:if test="${!i.last }">,</c:if>
 	</c:forTokens>
-	<hr>
 </body>
 </html>
